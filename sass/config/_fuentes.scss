@@ -1,0 +1,59 @@
+// Reset tamaño de tipografias
+
+ //Tamaños de fuentes
+
+$font-root: em(16px);
+$title: $font-root * 2;
+$sub-title: $font-root * 1.7;
+$big-title: $font-root * 3;
+
+$icon: $font-root * 3.5;
+
+$light: 300; //Ancho de fuente
+$normal: 400; //Ancho de fuente
+$bold: 600;
+
+
+h1{font-size: 2rem;}
+h2{font-size: 1.75rem;}
+h3{font-size: 1.5rem;}
+h4{font-size: 1.25rem;}
+
+h5, a, abbr, b, code, dfn, em, i, li, mark, p, pre, strong{
+  font-size: 1rem;
+}
+
+h6, small{font-size: .75rem;}
+
+// Importar Tipografía
+
+@import url('https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Noto+Sans|Noto+Serif|Open+Sans|Poiret+One');
+
+// font-family: 'Poiret One', cursive;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Bitter', serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+// principal y secundaria{
+// 	poiret-one : open sans,
+// 	bitter : open sans,
+// 	merriweather : open sans o montserrat,
+// 	noto-serif : noto sans u open sans
+// }
+
+$primary-font: 'Merriweather', serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+html {
+  font-family: $primary-font;
+  font-size: $font-root;
+}
+
+body{
+  font-family: $primary-font;
+}
+ 
+

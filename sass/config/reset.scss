@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000; 
+}
+
+body{
+  overflow-x: hidden;
+}
+
+/*Además, todo lo que haga antes y despues, añadeles un box-sizing heredaddo (inherit). Toma el valor del elemento padre. Con ello logramos que los elementos contenedores no hagan crecer la caja cuando tienen padding. También, reseteamos los margines y padding y el tamaño de letra*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a{text-decoration: none;}
+ 
+li{
+  margin-left: 0;
+  list-style-type: inherit;
+  list-style-position: inside;
+  list-style: none;
+}
+
+abbr, dfn, em, i {font-style: italic;}
+
+b, strong {font-weight: bold;}
+
+code, pre{font-family: monospace;}
+
+mark{background-color: yellow;}
+
+hr{
+  margin: 1rem auto;
+  width: 100%;
+  border: thin solid #000;
+}
+
+article, aside, details, img, figcaption, figure, footer, header, main, menu, nav, section, summary, button{display: block;}
+
+table{border-collapse: collapse;}
+
+audio, canvas, img, iframe, picture, progress, svg, video{
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Elementos de formulario */
+
+button, input, optgroup, option, select, textarea{
+  padding: .25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: thin solid #000;
+}
+
+button, input[type="button"], input[type="submit"], input[type="reset"], input[type="checkbox"], input[type="radio"], label, select{cursor: pointer;}
+
+/* Para elementos deshabilitados */
+
+*[disabled]{
+  cursor: default;
+  color: #999;
+  background-color: #ddd;
+}
+
+/* Para los textarea */
+
+textarea{resize: none;}
+
+/* Para cuando seleccionan elementos de nuestro sitio */
+
+::-moz-selection{
+  color: #fff;
+  background-color: #ccc;
+}
+
+::selection{
+  color: #fff;
+  background-color: #ccc;
+}
+
+// Para los iconos
+
+[class^="icon-"]::before { position: relative; top: 2px; margin-right: .5em; }

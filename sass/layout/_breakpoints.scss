@@ -1,0 +1,32 @@
+//Breakpoints
+
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$x-large: 1400px;
+
+//Minor Breakpoint
+
+$movil1: 360px;
+$movil2: 411px;
+
+
+//Mixin para media query
+
+@mixin mq($size){
+  @media screen and (min-width: $size){
+    @content;
+  }
+}
+
+//  ejemplo de uso
+
+// .box{
+//   color: red;
+//   @include mq($medium){
+//     color: green;
+//   }
+//   @include mq($large){
+//     color: purple;
+//   }
+// }

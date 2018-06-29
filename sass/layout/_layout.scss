@@ -1,0 +1,65 @@
+ //Off-canvas para el menu
+
+ $off-canvas: 11rem; //modificar segun necesidad o mejora
+
+ //Gutter para las separaciones
+
+ $gutter: 1rem;
+ $gutter-item: .5rem;
+
+ // variables para z-index
+
+ $capas:(
+	 capa1: 100,
+	 capa2: 200,
+	 capa3: 300,
+	 capa4: 400,
+	 capa5: 500,
+	 capa6: 600,
+	 capa7: 700,
+	 capa8: 800,
+	 capa9: 900,
+	 capa10: 1000
+ );
+
+
+
+ $top-header: rem(48px);
+
+
+@mixin c-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+}
+
+@mixin i-wrap{
+	display: block;
+	flex: auto;
+	height: auto;
+	//equivale a 1 1 auto
+	// grow(crecerá) shrink(se encogera) basis(base)
+}
+
+//ejemplo de uso
+
+// .usoejem{
+// 	@include c-wrap();
+// 	font-family: sans-serif;
+// }
+
+// Ancho de cajas
+
+ $max-width: 1400px;
+ $max-width-item: 1280px;
+
+.l-container{
+	max-width: $max-width;
+	margin: auto;
+}
+
+.l-container-item{
+	max-width: $max-width-item;
+	margin: auto;
+}

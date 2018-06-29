@@ -1,0 +1,98 @@
+  // Mixins
+
+  // Mixin básico, si lleva valores, los predeterminados van al final
+
+  @mixin button-ejemplo($line-height,$font-size,$display:inline-block){
+    //codigo ejemplo
+    display: $display;
+    line-height: $line-height;
+    font-size: $font-size;
+    padding: 0 1rem;
+  }
+
+  // ejemplo de uso
+  .button-ej{
+    @include button-ejemplo(3,1rem);
+    &-small{
+      @include button-ejemplo(2.5,0.8rem);
+    }
+  }
+
+  // Mixin con selectores adentro
+
+  @mixin nada($padding,$header-font,$header-color){
+    display: block;
+    padding: $padding;
+    header{
+      font-family: $header-font;
+      color: $header-color;
+    }
+  }
+
+  // ejemplo de uso
+
+  .nada{
+    @include nada(1em,Arial,blue);
+  }
+
+  // Mixin con múltiples argumentos
+
+  @mixin multiple($box-shadow...){
+    box-shadow: $box-shadow;
+  }
+
+  // ejemplo de uso
+
+  .box{
+    @include multiple(1px solid red, 2px solid blue, 5px solid white);
+  }
+
+  //Sombras
+
+  //box-shadow = ejeX ejeY difuminado(ejemplo 5px) color
+
+  $shadow-flat: 7px 7px 12px rgba(0, 0, 0, 0.575);
+  $shadow-blur: 10px 10px 10px rgba(0, 0, 0, 0.575);
+
+  .sombra-curva{
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 96%;
+      height: 10%;
+      bottom: -1%;
+      left: 0;
+      z-index: -1;
+      border-radius: 50%;
+      background-color: #000;
+      //se puede jugar con el opacity
+      opacity: .3;
+      box-shadow: 0 5px 12px #000;
+    }
+  }
+
+  
+
+  .sombra-concava{
+    position: relative;
+    &:after,
+    &:before{
+      content: "";
+      position: absolute;
+      width: 96%;
+      height: 5%;
+      bottom: 3%;
+      z-index: -1;
+      background-color: #000;
+      box-shadow: 0 5px 12px black;
+    }
+    &:before{
+      left: 1%;
+      transform: rotate(-2deg);
+    }
+    &:after{
+      right: 1%;
+      transform: rotate(2deg);
+    }
+  }

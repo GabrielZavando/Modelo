@@ -1,0 +1,63 @@
+// Bounce left
+@mixin bounceLeft($time){
+	animation: bounceLeft $time cubic-bezier(.33,1.37,.82,1.23);
+	@keyframes bounceLeft {
+		from{
+			transform: translate3d(-100%,0,0);
+		}		
+	}
+}
+
+// Bounce Right
+@mixin bounceRight($time){
+	animation: bounRight $time cubic-bezier(.33,1.37,.82,1.23);
+	@keyframes bounRight {
+		from{
+			transform: translate3d(100%,0,0);
+		}		
+	}
+}
+
+//Bounce top
+@mixin bounceTop($time){
+	animation: bounceTop $time cubic-bezier(.33,1.37,.82,1.23);
+	@keyframes bounceTop {
+		from{
+			transform: translate3d(0,-100%,0);
+		}		
+	}
+}
+
+//Bounce bottom
+@mixin bounceBottom($time){
+	animation: bounceBottom $time cubic-bezier(.33,1.37,.82,1.23);
+	@keyframes bounceBottom {
+		from{
+			transform: translate3d(0,100%,0);
+		}		
+	}
+}
+
+//También se puede hacer con @keyframes, uno en el que se pase y luego otro en el que retorne, pero lo ideal es usar cubic-bezier(). El problema es que safari tiene dificultades para interpretar el cubic-bezier().
+
+@mixin bounceLeftAlternate($time){
+	animation: bounceLeftAlternate $time;
+	@keyframes bounceLeftAlternate {
+		0%{
+			transform: translate3d(-100%,0,0);
+		}
+		90%{
+			transform: translate3d(10%,0,0);
+		}
+		100%{
+			transform: translate3d(0,0,0);
+		}		
+	}
+}
+
+//Creamos clases para tenerlas como alternativa de uso
+
+.bounceleft, .bounce-left{@include bounceLeft(1s)}
+.bounceright, .bounce-right{@include bounceRight(1s)}
+.bouncetop, .bounce-top{@include bounceTop(1s)}
+.bouncebottom, .bounce-bottom{@include bounceBottom(1s)}

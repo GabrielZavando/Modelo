@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Noto+Sans|Noto+Serif|Open+Sans|Poiret+One");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  color: #000; }
+
+body {
+  overflow-x: hidden; }
+
+/*Además, todo lo que haga antes y despues, añadeles un box-sizing heredaddo (inherit). Toma el valor del elemento padre. Con ello logramos que los elementos contenedores no hagan crecer la caja cuando tienen padding. También, reseteamos los margines y padding y el tamaño de letra*/
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  margin-left: 0;
+  list-style-type: inherit;
+  list-style-position: inside;
+  list-style: none; }
+
+abbr, dfn, em, i {
+  font-style: italic; }
+
+b, strong {
+  font-weight: bold; }
+
+code, pre {
+  font-family: monospace; }
+
+mark {
+  background-color: yellow; }
+
+hr {
+  margin: 1rem auto;
+  width: 100%;
+  border: thin solid #000; }
+
+article, aside, details, img, figcaption, figure, footer, header, main, menu, nav, section, summary, button {
+  display: block; }
+
+table {
+  border-collapse: collapse; }
+
+audio, canvas, img, iframe, picture, progress, svg, video {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
+
+/* Elementos de formulario */
+button, input, optgroup, option, select, textarea {
+  padding: .25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: thin solid #000; }
+
+button, input[type="button"], input[type="submit"], input[type="reset"], input[type="checkbox"], input[type="radio"], label, select {
+  cursor: pointer; }
+
+/* Para elementos deshabilitados */
+*[disabled] {
+  cursor: default;
+  color: #999;
+  background-color: #ddd; }
+
+/* Para los textarea */
+textarea {
+  resize: none; }
+
+/* Para cuando seleccionan elementos de nuestro sitio */
+::-moz-selection {
+  color: #fff;
+  background-color: #ccc; }
+
+::selection {
+  color: #fff;
+  background-color: #ccc; }
+
+[class^="icon-"]::before {
+  position: relative;
+  top: 2px;
+  margin-right: .5em; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.75rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h5, a, abbr, b, code, dfn, em, i, li, mark, p, pre, strong {
+  font-size: 1rem; }
+
+h6, small {
+  font-size: .75rem; }
+
+html {
+  font-family: "Merriweather", serif;
+  font-size: 1em; }
+
+body {
+  font-family: "Merriweather", serif; }
+
+.button-ej {
+  display: inline-block;
+  line-height: 3;
+  font-size: 1rem;
+  padding: 0 1rem; }
+  .button-ej-small {
+    display: inline-block;
+    line-height: 2.5;
+    font-size: 0.8rem;
+    padding: 0 1rem; }
+
+.nada {
+  display: block;
+  padding: 1em; }
+  .nada header {
+    font-family: Arial;
+    color: blue; }
+
+.box {
+  -webkit-box-shadow: 1px solid red, 2px solid blue, 5px solid white;
+          box-shadow: 1px solid red, 2px solid blue, 5px solid white; }
+
+.sombra-curva {
+  position: relative; }
+  .sombra-curva:after {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 10%;
+    bottom: -1%;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: .3;
+    -webkit-box-shadow: 0 5px 12px #000;
+            box-shadow: 0 5px 12px #000; }
+
+.sombra-concava {
+  position: relative; }
+  .sombra-concava:after, .sombra-concava:before {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 5%;
+    bottom: 3%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-box-shadow: 0 5px 12px black;
+            box-shadow: 0 5px 12px black; }
+  .sombra-concava:before {
+    left: 1%;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); }
+  .sombra-concava:after {
+    right: 1%;
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); }
+
+.l-container {
+  max-width: 1400px;
+  margin: auto; }
+
+.l-container-item {
+  max-width: 1280px;
+  margin: auto; }
+
+/*# sourceMappingURL=style.css.map */
